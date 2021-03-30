@@ -6,10 +6,10 @@ Install packages
 
     npm install
 
-Run dev enviroment
+Dev environment
 
     npm run dev
 
-Run prduction build
+Run production build
 
     npm run build
