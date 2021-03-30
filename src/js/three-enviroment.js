@@ -63,11 +63,9 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 	// Animations ----------------------------------------------------------------------------------
 
 	document.querySelector('#b1').addEventListener("click", function(){
-		sphereTo.speed = 0.05
 		sphereTo.position.x = 0;
 	});
 	document.querySelector('#b2').addEventListener("click", function(){
-		sphereTo.speed = 0.01
 		sphereTo.position.x = 10;
 	});
 
