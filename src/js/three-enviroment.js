@@ -11,21 +11,20 @@ import {
 
 import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
-	console.log('rum');
+	const container = document.querySelector('#three-container');
 
 	const scene = new Scene();
 		
-	const camera = new PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 0.1, 1000 );
+	const camera = new PerspectiveCamera( 45, container.offsetWidth / container.offsetHeight, 0.1, 1000 );
 		camera.position.z = 30;
 		
 	const renderer = new WebGLRenderer({antialias : true, alpha: true});
-		renderer.setSize( window.innerWidth, window.innerHeight );
+		renderer.setSize( container.offsetWidth, container.offsetHeight );
 		renderer.setClearColor(0x000000, 0);
+		container.appendChild(renderer.domElement);
 		
 	const controls = new OrbitControls(camera, renderer.domElement);
 
-	const container = document.querySelector('#three-container');
-		container.appendChild(renderer.domElement);
 
 
 	//SpotLight -------------------------------------------------------------------------------------
@@ -52,9 +51,9 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
 
 	//Resize ----------------------------------------------------------------------------------------
 	window.addEventListener( 'resize', function(){
-		camera.aspect = window.innerWidth/window.innerHeight;
+		camera.aspect = container.offsetWidth/container.offsetHeight;
 		camera.updateProjectionMatrix();
-		renderer.setSize(window.innerWidth,window.innerHeight);
+		renderer.setSize(container.offsetWidth,container.offsetHeight);
 		renderer.render(scene, camera);
 	}, false );
 
