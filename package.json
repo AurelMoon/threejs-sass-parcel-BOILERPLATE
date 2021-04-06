@@ -1,9 +1,9 @@
 {
   "name": "ingeunity",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.html",
   "scripts": {
-    "dev": "parcel src/index.html",
+    "dev": "parcel src/index.html --open",
     "build": "parcel build src/index.html"
   },
   "author": "",
