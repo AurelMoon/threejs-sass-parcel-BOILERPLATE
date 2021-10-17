@@ -72,7 +72,7 @@ import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls.js';
   
 	var sphereTo = {
 		position:{x:0,y:0,z:0},
-		speed: 0.05,
+		speed: 0.005,
 	};
 
 
