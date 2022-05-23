@@ -2,27 +2,20 @@
 	margin: 0
 	padding: 0
 
-body
-	background: #000
-	color: green
-
 #three-container
 	position: relative
 	width: 100%
 	height: 100vh
 
-.control-box
-	position: absolute
-	top: 10px
-	left: 10px
-	z-index: 99
+div.blendCircle
+	position: fixed
+	top: 50%
+	left: 50%
+	transform: translateX(-50%) translateY(-50%)
+	z-index: 10
+	mix-blend-mode: difference
+	border: 170px solid #fbff00
+	width: 850px
+	height: 850px
+	border-radius: 50%
 
-	#b1, #b2
-		border: none
-		box-sizing: border-box
-		padding: 6px 12px
-		background: rgba(white, .2)
-		color: white
-		border-radius: 4px
-		margin-right: 10px
-		cursor: pointer
